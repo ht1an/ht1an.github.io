@@ -1,36 +1,178 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Hao's Homepage</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. [Your Name] - Astrophysicist</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --space-dark: #0B1A30;
+            --nebula-blue: #2A4B7C;
+            --star-yellow: #FFD700;
+            --galaxy-purple: #6C5B7B;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(to bottom right, #0F2027, #203A43, #2C5364);
+        }
+
+        .header {
+            background: var(--space-dark);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            border-bottom: 3px solid var(--star-yellow);
+        }
+
+        .nav {
+            background: rgba(11, 26, 48, 0.95);
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+        }
+
+        .nav a {
+            color: white;
+            margin: 0 1.5rem;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .section {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .publication-item {
+            border-left: 4px solid var(--nebula-blue);
+            padding-left: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .telescope-icon {
+            font-size: 2rem;
+            color: var(--star-yellow);
+        }
+    </style>
 </head>
 <body>
-    <header class="site-header">
-        <nav>
-            <a href="/">Homepage</a>
-            <a href="/about.html">About me</a>
-            <a href="/work.html">Interests</a>
-            <a href="/projects/">Science Projects</a>
-        </nav>
+    <header class="header">
+        <h1>Dr. [Your Full Name]</h1>
+        <p class="subtitle">Stellar Astrophysics Researcher</p>
+        <div class="social-links">
+            <a href="[ORCID_URL]"><i class="fab fa-orcid"></i></a>
+            <a href="[GoogleScholar_URL]"><i class="fab fa-google-scholar"></i></a>
+            <a href="[Github_URL]"><i class="fab fa-github"></i></a>
+        </div>
     </header>
 
-    <main>
-        <section class="hero">
-            <h1>Welcome to my homepage</h1>
-            <p>探索我的专业旅程与创新实践</p>
-        </section>
-        
-        <div class="highlights">
-            <div class="card">
-                <h3>Latest work</h3>
-                <!-- 动态内容区 -->
+    <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#observations">Observations</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about" class="section">
+        <h2><i class="fas fa-user-astronaut telescope-icon"></i> About Me</h2>
+        <div class="bio">
+            <img src="[Your_Photo]" alt="Profile Photo" style="float: right; width: 200px; border-radius: 50%; margin-left: 2rem;">
+            <p>[Your detailed biography including education, positions, and research focus]</p>
+            <h3>Key Expertise:</h3>
+            <ul>
+                <li>Stellar Evolution Modeling</li>
+                <li>High-resolution Spectroscopy</li>
+                <li>Large Survey Data Analysis</li>
+                <li>Exoplanet Detection Methods</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="research" class="section">
+        <h2><i class="fas fa-rocket telescope-icon"></i> Research Areas</h2>
+        <div class="research-grid">
+            <div class="research-card">
+                <h3>Stellar Atmospheres</h3>
+                <p>Investigating chemical abundance patterns in metal-poor stars...</p>
             </div>
-            <div class="card">
-                <h3>Recent results</h3>
-                <!-- 项目摘要 -->
+            <div class="research-card">
+                <h3>Galactic Archaeology</h3>
+                <p>Using Gaia data to reconstruct Milky Way formation history...</p>
+            </div>
+            <div class="research-card">
+                <h3>Exoplanet Host Stars</h3>
+                <p>Characterizing stellar parameters for TESS planet candidates...</p>
             </div>
         </div>
-    </main>
+    </section>
+
+    <section id="publications" class="section">
+        <h2><i class="fas fa-book-open telescope-icon"></i> Selected Publications</h2>
+        <div class="publication-item">
+            <h3>2023 - ApJ</h3>
+            <p><strong>Title:</strong> "Chemical Abundances in the Galactic Halo"<br>
+            <strong>Authors:</strong> Your Name et al.<br>
+            <a href="[ADS_LINK]">ADS Abstract</a> | <a href="[ARXIV_LINK]">arXiv PDF</a></p>
+        </div>
+        <!-- Add more publications -->
+    </section>
+
+    <section id="observations" class="section">
+        <h2><i class="fas fa-satellite telescope-icon"></i> Observational Projects</h2>
+        <table>
+            <tr>
+                <th>Telescope</th>
+                <th>Instrument</th>
+                <th>PI Status</th>
+                <th>Data Access</th>
+            </tr>
+            <tr>
+                <td>HST</td>
+                <td>COS</td>
+                <td>2022-2024</td>
+                <td><a href="[MAST_LINK]">MAST Archive</a></td>
+            </tr>
+            <!-- Add more observations -->
+        </table>
+    </section>
+
+    <section id="contact" class="section">
+        <h2><i class="fas fa-envelope telescope-icon"></i> Contact</h2>
+        <p>Affiliation: [Your University/Institute]<br>
+        Address: [Observatory/Department Address]<br>
+        Email: <a href="mailto:your.email@institute.edu">your.email@institute.edu</a></p>
+    </section>
+
+    <script>
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Dynamic publication year filter
+        const filterPublications = (year) => {
+            // Add JavaScript logic to filter publications
+        };
+    </script>
 </body>
 </html>
