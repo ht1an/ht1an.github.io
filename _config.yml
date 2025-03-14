@@ -1,3 +1,15 @@
-theme: minima
+title: "技术探索者 - 李明"
+description: "人工智能与全栈开发实践者"
+baseurl: ""
+url: "https://yourusername.github.io"
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:path/
+
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
+
+theme: minima
