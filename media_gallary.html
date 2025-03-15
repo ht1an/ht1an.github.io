@@ -1,0 +1,44 @@
+<!-- 在原有代码的 container div 内添加 -->
+<div class="embedded-page">
+    <h2 class="section-title">Media Gallary</h2>
+    <iframe 
+        src="animation_kde.html"
+        frameborder="0"
+        allowfullscreen
+        loading="lazy"
+        class="responsive-iframe">
+    </iframe>
+</div>
+
+<style>
+/* 添加在原有CSS中 */
+.embedded-page {
+    margin: 40px 0;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    overflow: hidden;
+    animation: fadeIn 1s ease-out;
+}
+
+.responsive-iframe {
+    width: 100%;
+    height: 900px;
+    border: none;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .responsive-iframe {
+        height: 500px;
+    }
+}
+
+.section-title {
+    padding: 20px;
+    margin: 0;
+    background: #4ecdc4;
+    color: white;
+    font-size: 1.5em;
+}
+</style>

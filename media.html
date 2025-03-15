@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Media Gallary" content="width=device-width, initial-scale=1.0">
+    <title>Media Gallary</title>
+    <style>
+        /* 基础样式 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f0f2f5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* 图片展示区 */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        /* 图片卡片动画 */
+        .card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-bottom: 2px solid #eee;
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        /* 文字动画 */
+        .animated-text {
+            text-align: center;
+            margin: 40px 0;
+            font-size: 2em;
+            color: #333;
+            animation: colorChange 3s infinite alternate;
+        }
+
+        /* 关键帧动画 */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        @keyframes colorChange {
+            0% { color: #333; }
+            50% { color: #ff6b6b; }
+            100% { color: #4ecdc4; }
+        }
+
+        /* 浮动动画元素 */
+        .floating-element {
+            width: 100px;
+            height: 100px;
+            background: #4ecdc4;
+            border-radius: 50%;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            animation: float 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="animated-text">My Media Gallary</h1>
+
+        <div class="embedded-page">
+            <h2 class="section-title">Mock Stream Originated from a Satellite</h2>
+            <iframe
+                src="animation_kde.html"
+                frameborder="0"
+                allowfullscreen
+                loading="lazy"
+                class="responsive-iframe">
+            </iframe>
+
+        </div>
+        <style>
+        /* 添加在原有CSS中 */
+        .embedded-page {
+            margin: 10px 0;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            overflow: hidden;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .responsive-iframe {
+            width: 100%;
+            height: 900px;
+            border: none;
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .responsive-iframe {
+                height: 900px;
+            }
+        }
+
+        .section-title {
+            padding: 20px;
+            margin: 0;
+            background: #4ecdc4;
+            color: white;
+            font-size: 1.5em;
+        }
+        </style>
+            <!-- 图片卡片2 -->
+            <div class="card">
+                <img src="your-image-2.jpg" alt="作品2">
+                <div class="card-content">
+                    <h3>动态交互</h3>
+                    <p>用户体验优化方案</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 浮动装饰元素 -->
+        <div class="floating-element"></div>
+    </div>
+</body>
+</html>
