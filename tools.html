@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tools & Calculators</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #4a90e2;
+            --secondary-color: #2c3e50;
+            --background-color: #f5f6fa;
+            --card-background: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--background-color);
+            color: var(--secondary-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .tool-card {
+            background: var(--card-background);
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .tool-card i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .tool-card h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .tool-card a {
+            text-decoration: none;
+            color: var(--secondary-color);
+        }
+
+        .calculator-section {
+            background: var(--card-background);
+            border-radius: 10px;
+            padding: 2rem;
+            margin-top: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .calculator {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            border: 1px solid #eee;
+            border-radius: 5px;
+        }
+
+        .calculator input {
+            width: 100%;
+            padding: 0.5rem;
+            margin: 0.5rem 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .calculator button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .calculator button:hover {
+            background-color: #357abd;
+        }
+
+        .result {
+            margin-top: 1rem;
+            padding: 0.5rem;
+            background-color: #f8f9fa;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Tools & Calculators</h1>
+            <p>Useful tools and calculators for your daily needs</p>
+        </header>
+
+        <div class="tools-grid">
+            <!-- Tool Cards -->
+            <div class="tool-card">
+                <i class="fas fa-calculator"></i>
+                <h3>Basic Calculator</h3>
+                <p>Simple arithmetic calculations</p>
+            </div>
+            <div class="tool-card">
+                <i class="fas fa-weight"></i>
+                <h3>Unit Converter</h3>
+                <p>Convert between different units</p>
+            </div>
+            <div class="tool-card">
+                <i class="fas fa-clock"></i>
+                <h3>Time Calculator</h3>
+                <p>Calculate time differences</p>
+            </div>
+            <div class="tool-card">
+                <i class="fas fa-percentage"></i>
+                <h3>Percentage Calculator</h3>
+                <p>Calculate percentages easily</p>
+            </div>
+        </div>
+
+        <div class="calculator-section">
+            <h2>Calculators</h2>
+            
+            <!-- Basic Calculator -->
+            <div class="calculator">
+                <h3>Basic Calculator</h3>
+                <input type="number" id="num1" placeholder="Enter first number">
+                <input type="number" id="num2" placeholder="Enter second number">
+                <button onclick="calculate()">Calculate</button>
+                <div class="result" id="calcResult"></div>
+            </div>
+
+            <!-- Percentage Calculator -->
+            <div class="calculator">
+                <h3>Percentage Calculator</h3>
+                <input type="number" id="value" placeholder="Enter value">
+                <input type="number" id="percentage" placeholder="Enter percentage">
+                <button onclick="calculatePercentage()">Calculate</button>
+                <div class="result" id="percentageResult"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Basic Calculator
+        function calculate() {
+            const num1 = parseFloat(document.getElementById('num1').value);
+            const num2 = parseFloat(document.getElementById('num2').value);
+            
+            if (isNaN(num1) || isNaN(num2)) {
+                document.getElementById('calcResult').innerHTML = 'Please enter valid numbers';
+                return;
+            }
+
+            const sum = num1 + num2;
+            const difference = num1 - num2;
+            const product = num1 * num2;
+            const quotient = num1 / num2;
+
+            document.getElementById('calcResult').innerHTML = `
+                Addition: ${sum}<br>
+                Subtraction: ${difference}<br>
+                Multiplication: ${product}<br>
+                Division: ${quotient}
+            `;
+        }
+
+        // Percentage Calculator
+        function calculatePercentage() {
+            const value = parseFloat(document.getElementById('value').value);
+            const percentage = parseFloat(document.getElementById('percentage').value);
+            
+            if (isNaN(value) || isNaN(percentage)) {
+                document.getElementById('percentageResult').innerHTML = 'Please enter valid numbers';
+                return;
+            }
+
+            const result = (value * percentage) / 100;
+            document.getElementById('percentageResult').innerHTML = `
+                ${percentage}% of ${value} = ${result}
+            `;
+        }
+    </script>
+</body>
+</html> 
