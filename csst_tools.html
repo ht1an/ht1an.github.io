@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSST Tools & Resources</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #3a6ea5;
+            --secondary-color: #2c3e50;
+            --background-color: #f0f3f7;
+            --card-background: #ffffff;
+            --hover-color: #2a5180;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--background-color);
+            color: var(--secondary-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 1.5rem;
+            background-color: var(--card-background);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            margin: 2rem 0 1rem;
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .tool-card {
+            background: var(--card-background);
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .tool-card i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .tool-card h3 {
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .tool-card p {
+            margin-bottom: 1rem;
+            flex-grow: 1;
+        }
+
+        .tool-card a {
+            text-decoration: none;
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            margin-top: auto;
+            text-align: center;
+        }
+
+        .tool-card a:hover {
+            background-color: var(--hover-color);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 1rem;
+            background-color: var(--card-background);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>CSST Tools & Resources</h1>
+            <p>A collection of commonly used tools and resources for CSST projects</p>
+        </header>
+
+        <h2 class="section-title">Data Analysis Tools</h2>
+        <div class="tools-grid">
+            <!-- Data Analysis Tools -->
+            <div class="tool-card">
+                <i class="fas fa-chart-line"></i>
+                <h3>Spectrum Analyzer</h3>
+                <p>Process and analyze spectral data from telescope observations.</p>
+                <a href="#" target="_blank">Access Tool</a>
+            </div>
+            <div class="tool-card">
+                <i class="fas fa-table"></i>
+                <h3>Catalog Explorer</h3>
+                <p>Search and explore astronomical catalogs with filtering capabilities.</p>
+                <a href="#" target="_blank">Access Tool</a>
+            </div>
+            <div class="tool-card">
+                <i class="fas fa-star"></i>
+                <h3>Photometry Calculator</h3>
+                <p>Calculate photometric parameters for observed objects.</p>
+                <a href="#" target="_blank">Access Tool</a>
+            </div>
+            <div class="tool-card">
+                <i class="fas fa-project-diagram"></i>
+                <h3>Data Pipeline Interface</h3>
+                <p>Access and manage CSST data processing pipelines.</p>
+                <a href="#" target="_blank">Access Tool</a>
+            </div>
+        </div>
+
+        <h2 class="section-title">Observation Planning</h2>
+        <div class="tools-grid">
+            <!-- Observation Planning Tools -->
+            <div class="tool-card">
+                <i class="fas fa-calendar-alt"></i>
+                <h3>Observation Scheduler</h3>
+                <p>Plan and schedule telescope observation times for optimal data collection.</p>
+                <a href="#" target="_blank">Access Tool</a>
+            </div>
+            <div class="tool-card">
+                <i class="fas fa-map-marked-alt"></i>
+                <h3>Sky Coverage Viewer</h3>
+                <p>Visualize sky coverage and planned observation fields.</p>
+                <a href="#" target="_blank">Access Tool</a>
+            </div>
+            <div class="tool-card">
+                <i class="fas fa-satellite"></i>
+                <h3>Orbit Predictor</h3>
+                <p>Calculate and predict telescope orbit and pointing capabilities.</p>
+                <a href="#" target="_blank">Access Tool</a>
+            </div>
+        </div>
+
+        <h2 class="section-title">Documentation & Resources</h2>
+        <div class="tools-grid">
+            <!-- Documentation & Resources -->
+            <div class="tool-card">
+                <i class="fas fa-book"></i>
+                <h3>CSST Documentation</h3>
+                <p>Comprehensive documentation for all CSST instruments and procedures.</p>
+                <a href="#" target="_blank">Access Resources</a>
+            </div>
+            <div class="tool-card">
+                <i class="fas fa-graduation-cap"></i>
+                <h3>Training Materials</h3>
+                <p>Training guides and tutorials for new CSST researchers and staff.</p>
+                <a href="#" target="_blank">Access Resources</a>
+            </div>
+            <div class="tool-card">
+                <i class="fas fa-database"></i>
+                <h3>Data Archive</h3>
+                <p>Access the historical archive of CSST observations and processed data.</p>
+                <a href="#" target="_blank">Access Resources</a>
+            </div>
+            <div class="tool-card">
+                <i class="fas fa-users"></i>
+                <h3>Community Forum</h3>
+                <p>Connect with other CSST researchers and share knowledge.</p>
+                <a href="#" target="_blank">Access Resources</a>
+            </div>
+        </div>
+
+        <!-- <footer>
+            <p>&copy; 2023 CSST Project. All rights reserved.</p>
+            <p>Contact: <a href="mailto:info@csst-project.org">info@csst-project.org</a></p>
+        </footer> -->
+    </div>
+</body>
+</html> 
